@@ -1,0 +1,18 @@
+PODS:
+  - FXBlurView (1.6.3)
+  - Masonry (0.6.1)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+
+DEPENDENCIES:
+  - FXBlurView
+  - Masonry
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  FXBlurView: c6d23f3d35af2c6282296a2930f61c6e2c788d01
+  Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+
+COCOAPODS: 0.37.0.beta.1
