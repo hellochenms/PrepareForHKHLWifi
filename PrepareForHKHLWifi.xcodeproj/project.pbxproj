@@ -22,9 +22,21 @@
 		1A7CAD611B14787E006321E5 /* AdjustTableViewBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CAD571B14787E006321E5 /* AdjustTableViewBCell.xib */; };
 		1A7CAD621B14787E006321E5 /* AdjustTableViewCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CAD591B14787E006321E5 /* AdjustTableViewCCell.m */; };
 		1A7CAD631B14787E006321E5 /* AdjustTableViewCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CAD5A1B14787E006321E5 /* AdjustTableViewCCell.xib */; };
-		1AAD0B5E1B14885900F063FA /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD0B5C1B14885900F063FA /* VideoViewController.m */; };
-		1AAD0B5F1B14885900F063FA /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AAD0B5D1B14885900F063FA /* VideoViewController.xib */; };
-		1AAD0B621B148A3B00F063FA /* M2NoControlPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD0B611B148A3B00F063FA /* M2NoControlPlayerView.m */; };
+		1AA678171B155B09005927C8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA678161B155B09005927C8 /* CoreMedia.framework */; };
+		1AA6781F1B15A782005927C8 /* CoreVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6781B1B15A782005927C8 /* CoreVideoViewController.m */; };
+		1AA678201B15A782005927C8 /* CoreVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6781C1B15A782005927C8 /* CoreVideoViewController.xib */; };
+		1AA678211B15A782005927C8 /* M2CorePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6781E1B15A782005927C8 /* M2CorePlayerView.m */; };
+		1AA678261B15A824005927C8 /* ToFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA678241B15A824005927C8 /* ToFullScreenViewController.m */; };
+		1AA678271B15A824005927C8 /* ToFullScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA678251B15A824005927C8 /* ToFullScreenViewController.xib */; };
+		1AA6783A1B15BECD005927C8 /* M7ShellPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA678351B15BECD005927C8 /* M7ShellPlayerView.m */; };
+		1AA6783B1B15BECD005927C8 /* M7ShellPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA678361B15BECD005927C8 /* M7ShellPlayerView.xib */; };
+		1AA6783C1B15BECD005927C8 /* ShellVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA678381B15BECD005927C8 /* ShellVideoViewController.m */; };
+		1AA6783D1B15BECD005927C8 /* ShellVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA678391B15BECD005927C8 /* ShellVideoViewController.xib */; };
+		1AA678421B15BEF9005927C8 /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA678401B15BEF9005927C8 /* SliderViewController.m */; };
+		1AA678431B15BEF9005927C8 /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA678411B15BEF9005927C8 /* SliderViewController.xib */; };
+		1AA678481B15BFEE005927C8 /* 1@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA678461B15BFEE005927C8 /* 1@2x~ipad.png */; };
+		1AA678491B15BFEE005927C8 /* 2@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA678471B15BFEE005927C8 /* 2@2x~ipad.png */; };
+		1AA6784B1B15C228005927C8 /* slider_thumb@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6784A1B15C228005927C8 /* slider_thumb@2x~ipad.png */; };
 		1AAD0B641B14982E00F063FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD0B631B14982E00F063FA /* AVFoundation.framework */; };
 		1AAD0B681B14A39900F063FA /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD0B671B14A39900F063FA /* UIImage+Utils.m */; };
 		CAAD11FFAA5A0DFE1EDF22F0 /* libPods-PrepareForHKHLWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 352596DCE223B848671DA648 /* libPods-PrepareForHKHLWifi.a */; };
@@ -66,11 +78,27 @@
 		1A7CAD581B14787E006321E5 /* AdjustTableViewCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustTableViewCCell.h; sourceTree = "<group>"; };
 		1A7CAD591B14787E006321E5 /* AdjustTableViewCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdjustTableViewCCell.m; sourceTree = "<group>"; };
 		1A7CAD5A1B14787E006321E5 /* AdjustTableViewCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdjustTableViewCCell.xib; sourceTree = "<group>"; };
-		1AAD0B5B1B14885900F063FA /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
-		1AAD0B5C1B14885900F063FA /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
-		1AAD0B5D1B14885900F063FA /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
-		1AAD0B601B148A3B00F063FA /* M2NoControlPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2NoControlPlayerView.h; sourceTree = "<group>"; };
-		1AAD0B611B148A3B00F063FA /* M2NoControlPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2NoControlPlayerView.m; sourceTree = "<group>"; };
+		1AA678161B155B09005927C8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1AA6781A1B15A782005927C8 /* CoreVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreVideoViewController.h; sourceTree = "<group>"; };
+		1AA6781B1B15A782005927C8 /* CoreVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreVideoViewController.m; sourceTree = "<group>"; };
+		1AA6781C1B15A782005927C8 /* CoreVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreVideoViewController.xib; sourceTree = "<group>"; };
+		1AA6781D1B15A782005927C8 /* M2CorePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2CorePlayerView.h; sourceTree = "<group>"; };
+		1AA6781E1B15A782005927C8 /* M2CorePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2CorePlayerView.m; sourceTree = "<group>"; };
+		1AA678231B15A824005927C8 /* ToFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToFullScreenViewController.h; sourceTree = "<group>"; };
+		1AA678241B15A824005927C8 /* ToFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToFullScreenViewController.m; sourceTree = "<group>"; };
+		1AA678251B15A824005927C8 /* ToFullScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToFullScreenViewController.xib; sourceTree = "<group>"; };
+		1AA678341B15BECD005927C8 /* M7ShellPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M7ShellPlayerView.h; sourceTree = "<group>"; };
+		1AA678351B15BECD005927C8 /* M7ShellPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M7ShellPlayerView.m; sourceTree = "<group>"; };
+		1AA678361B15BECD005927C8 /* M7ShellPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = M7ShellPlayerView.xib; sourceTree = "<group>"; };
+		1AA678371B15BECD005927C8 /* ShellVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellVideoViewController.h; sourceTree = "<group>"; };
+		1AA678381B15BECD005927C8 /* ShellVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellVideoViewController.m; sourceTree = "<group>"; };
+		1AA678391B15BECD005927C8 /* ShellVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShellVideoViewController.xib; sourceTree = "<group>"; };
+		1AA6783F1B15BEF9005927C8 /* SliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderViewController.h; sourceTree = "<group>"; };
+		1AA678401B15BEF9005927C8 /* SliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderViewController.m; sourceTree = "<group>"; };
+		1AA678411B15BEF9005927C8 /* SliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
+		1AA678461B15BFEE005927C8 /* 1@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x~ipad.png"; sourceTree = "<group>"; };
+		1AA678471B15BFEE005927C8 /* 2@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x~ipad.png"; sourceTree = "<group>"; };
+		1AA6784A1B15C228005927C8 /* slider_thumb@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider_thumb@2x~ipad.png"; sourceTree = "<group>"; };
 		1AAD0B631B14982E00F063FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1AAD0B661B14A39900F063FA /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
 		1AAD0B671B14A39900F063FA /* UIImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
@@ -85,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA678171B155B09005927C8 /* CoreMedia.framework in Frameworks */,
 				1AAD0B641B14982E00F063FA /* AVFoundation.framework in Frameworks */,
 				CAAD11FFAA5A0DFE1EDF22F0 /* libPods-PrepareForHKHLWifi.a in Frameworks */,
 			);
@@ -129,8 +158,12 @@
 				1A3166641AFB1AD6002DCCBF /* ViewController.m */,
 				1A3166661AFB1AD6002DCCBF /* Main.storyboard */,
 				1A7CAD4E1B14787E006321E5 /* 0.自适应高度图文Cell */,
-				1A7CAD5B1B14787E006321E5 /* 1.播放器 */,
+				1AA678191B15A782005927C8 /* 1.播放器核View */,
+				1AA678221B15A809005927C8 /* 2.view放大到全屏 */,
+				1AA6783E1B15BEE7005927C8 /* 3.Slider */,
+				1AA678331B15BECD005927C8 /* 4.播放器壳View */,
 				1AAD0B651B14A36400F063FA /* Category */,
+				1AA678441B15BFA5005927C8 /* Resources */,
 				1A3166691AFB1AD6002DCCBF /* Images.xcassets */,
 				1A31666B1AFB1AD6002DCCBF /* LaunchScreen.xib */,
 				1A31665C1AFB1AD6002DCCBF /* Supporting Files */,
@@ -185,17 +218,71 @@
 			path = "Class/0.自适应高度图文Cell";
 			sourceTree = "<group>";
 		};
-		1A7CAD5B1B14787E006321E5 /* 1.播放器 */ = {
+		1AA678191B15A782005927C8 /* 1.播放器核View */ = {
 			isa = PBXGroup;
 			children = (
-				1AAD0B5B1B14885900F063FA /* VideoViewController.h */,
-				1AAD0B5C1B14885900F063FA /* VideoViewController.m */,
-				1AAD0B5D1B14885900F063FA /* VideoViewController.xib */,
-				1AAD0B601B148A3B00F063FA /* M2NoControlPlayerView.h */,
-				1AAD0B611B148A3B00F063FA /* M2NoControlPlayerView.m */,
+				1AA6781A1B15A782005927C8 /* CoreVideoViewController.h */,
+				1AA6781B1B15A782005927C8 /* CoreVideoViewController.m */,
+				1AA6781C1B15A782005927C8 /* CoreVideoViewController.xib */,
+				1AA6781D1B15A782005927C8 /* M2CorePlayerView.h */,
+				1AA6781E1B15A782005927C8 /* M2CorePlayerView.m */,
 			);
-			name = "1.播放器";
-			path = "Class/1.播放器";
+			name = "1.播放器核View";
+			path = "Class/1.播放器核View";
+			sourceTree = "<group>";
+		};
+		1AA678221B15A809005927C8 /* 2.view放大到全屏 */ = {
+			isa = PBXGroup;
+			children = (
+				1AA678231B15A824005927C8 /* ToFullScreenViewController.h */,
+				1AA678241B15A824005927C8 /* ToFullScreenViewController.m */,
+				1AA678251B15A824005927C8 /* ToFullScreenViewController.xib */,
+			);
+			name = "2.view放大到全屏";
+			path = "Class/2.view放大到全屏";
+			sourceTree = "<group>";
+		};
+		1AA678331B15BECD005927C8 /* 4.播放器壳View */ = {
+			isa = PBXGroup;
+			children = (
+				1AA678371B15BECD005927C8 /* ShellVideoViewController.h */,
+				1AA678381B15BECD005927C8 /* ShellVideoViewController.m */,
+				1AA678391B15BECD005927C8 /* ShellVideoViewController.xib */,
+				1AA678341B15BECD005927C8 /* M7ShellPlayerView.h */,
+				1AA678351B15BECD005927C8 /* M7ShellPlayerView.m */,
+				1AA678361B15BECD005927C8 /* M7ShellPlayerView.xib */,
+			);
+			name = "4.播放器壳View";
+			path = "Class/4.播放器壳View";
+			sourceTree = "<group>";
+		};
+		1AA6783E1B15BEE7005927C8 /* 3.Slider */ = {
+			isa = PBXGroup;
+			children = (
+				1AA6783F1B15BEF9005927C8 /* SliderViewController.h */,
+				1AA678401B15BEF9005927C8 /* SliderViewController.m */,
+				1AA678411B15BEF9005927C8 /* SliderViewController.xib */,
+			);
+			name = 3.Slider;
+			path = Class/3.Slider;
+			sourceTree = "<group>";
+		};
+		1AA678441B15BFA5005927C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1AA678451B15BFA5005927C8 /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1AA678451B15BFA5005927C8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1AA6784A1B15C228005927C8 /* slider_thumb@2x~ipad.png */,
+				1AA678461B15BFEE005927C8 /* 1@2x~ipad.png */,
+				1AA678471B15BFEE005927C8 /* 2@2x~ipad.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		1AAD0B651B14A36400F063FA /* Category */ = {
@@ -220,6 +307,7 @@
 		B06DD96C18BCD46276A4CB3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AA678161B155B09005927C8 /* CoreMedia.framework */,
 				1AAD0B631B14982E00F063FA /* AVFoundation.framework */,
 				352596DCE223B848671DA648 /* libPods-PrepareForHKHLWifi.a */,
 			);
@@ -308,14 +396,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA678481B15BFEE005927C8 /* 1@2x~ipad.png in Resources */,
 				1A3166681AFB1AD6002DCCBF /* Main.storyboard in Resources */,
 				1A7CAD631B14787E006321E5 /* AdjustTableViewCCell.xib in Resources */,
 				1A7CAD5F1B14787E006321E5 /* AdjustTableViewACell.xib in Resources */,
+				1AA678271B15A824005927C8 /* ToFullScreenViewController.xib in Resources */,
+				1AA6784B1B15C228005927C8 /* slider_thumb@2x~ipad.png in Resources */,
+				1AA678201B15A782005927C8 /* CoreVideoViewController.xib in Resources */,
 				1A31666D1AFB1AD6002DCCBF /* LaunchScreen.xib in Resources */,
+				1AA6783D1B15BECD005927C8 /* ShellVideoViewController.xib in Resources */,
+				1AA678491B15BFEE005927C8 /* 2@2x~ipad.png in Resources */,
+				1AA6783B1B15BECD005927C8 /* M7ShellPlayerView.xib in Resources */,
 				1A31666A1AFB1AD6002DCCBF /* Images.xcassets in Resources */,
 				1A7CAD5D1B14787E006321E5 /* AdjustCellViewController.xib in Resources */,
-				1AAD0B5F1B14885900F063FA /* VideoViewController.xib in Resources */,
 				1A7CAD611B14787E006321E5 /* AdjustTableViewBCell.xib in Resources */,
+				1AA678431B15BEF9005927C8 /* SliderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,14 +461,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA6783C1B15BECD005927C8 /* ShellVideoViewController.m in Sources */,
+				1AA678421B15BEF9005927C8 /* SliderViewController.m in Sources */,
 				1A7CAD621B14787E006321E5 /* AdjustTableViewCCell.m in Sources */,
-				1AAD0B621B148A3B00F063FA /* M2NoControlPlayerView.m in Sources */,
+				1AA678261B15A824005927C8 /* ToFullScreenViewController.m in Sources */,
+				1AA6783A1B15BECD005927C8 /* M7ShellPlayerView.m in Sources */,
 				1A3166651AFB1AD6002DCCBF /* ViewController.m in Sources */,
 				1A3166621AFB1AD6002DCCBF /* AppDelegate.m in Sources */,
 				1A31665F1AFB1AD6002DCCBF /* main.m in Sources */,
+				1AA6781F1B15A782005927C8 /* CoreVideoViewController.m in Sources */,
 				1A7CAD5C1B14787E006321E5 /* AdjustCellViewController.m in Sources */,
 				1A7CAD5E1B14787E006321E5 /* AdjustTableViewACell.m in Sources */,
-				1AAD0B5E1B14885900F063FA /* VideoViewController.m in Sources */,
+				1AA678211B15A782005927C8 /* M2CorePlayerView.m in Sources */,
 				1A7CAD601B14787E006321E5 /* AdjustTableViewBCell.m in Sources */,
 				1AAD0B681B14A39900F063FA /* UIImage+Utils.m in Sources */,
 			);

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderViewController">
+            <connections>
+                <outlet property="slider" destination="Hm8-Va-XxK" id="YZF-4l-6ZL"/>
+                <outlet property="vSlider" destination="riD-Rd-q9G" id="tJN-nP-7P6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="oxy-gs-ez3">
+                    <rect key="frame" x="20" y="113" width="560" height="2"/>
+                </progressView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hm8-Va-XxK">
+                    <rect key="frame" x="18" y="84" width="564" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="FrR-Xs-x6I"/>
+                    </constraints>
+                    <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="riD-Rd-q9G">
+                    <rect key="frame" x="378" y="450" width="204" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="E2d-Qp-JRh"/>
+                        <constraint firstAttribute="height" constant="30" id="sIA-FJ-aqq"/>
+                    </constraints>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="riD-Rd-q9G" secondAttribute="trailing" constant="20" id="1fU-oH-xJz"/>
+                <constraint firstAttribute="bottom" secondItem="riD-Rd-q9G" secondAttribute="bottom" constant="120" id="1yq-FD-3lm"/>
+                <constraint firstItem="Hm8-Va-XxK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="Cmq-i1-Heh"/>
+                <constraint firstItem="Hm8-Va-XxK" firstAttribute="centerY" secondItem="oxy-gs-ez3" secondAttribute="centerY" id="PBh-Wt-QTC"/>
+                <constraint firstItem="Hm8-Va-XxK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="lns-Pq-GII"/>
+                <constraint firstItem="Hm8-Va-XxK" firstAttribute="width" secondItem="oxy-gs-ez3" secondAttribute="width" id="ojS-VS-mNP"/>
+                <constraint firstAttribute="trailing" secondItem="Hm8-Va-XxK" secondAttribute="trailing" constant="20" id="sZ6-o6-pFB"/>
+                <constraint firstItem="Hm8-Va-XxK" firstAttribute="centerX" secondItem="oxy-gs-ez3" secondAttribute="centerX" id="yaG-1v-04O"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

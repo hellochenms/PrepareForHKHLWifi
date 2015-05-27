@@ -6,18 +6,19 @@
 //  Copyright (c) 2015年 chenms.m2. All rights reserved.
 //
 
-#import "M2NoControlPlayerView.h"
+#import "M2CorePlayerView.h"
 #import <AVFoundation/AVFoundation.h>
 
 static NSString * const s_M2NCPVKeyPathStatus = @"status";
 
-@interface M2NoControlPlayerView ()
+@interface M2CorePlayerView ()
 //@property (nonatomic) AVPlayerLayer *playerLayer;
 @property (nonatomic) AVPlayer *player;
 @property (nonatomic) AVPlayerItem *curPlayerItem;
+@property (nonatomic) NSTimer *progressTimer;
 @end
 
-@implementation M2NoControlPlayerView
+@implementation M2CorePlayerView
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -39,6 +40,9 @@ static NSString * const s_M2NCPVKeyPathStatus = @"status";
 
 #pragma mark - reload data
 - (void)reloadDataWithVideoURLString:(NSString *)videoURLString {
+    //
+    [self stop];
+    
     // TODO: clear old
     [self.curPlayerItem removeObserver:self forKeyPath:s_M2NCPVKeyPathStatus];
     [self.curPlayerItem cancelPendingSeeks];
@@ -67,14 +71,57 @@ static NSString * const s_M2NCPVKeyPathStatus = @"status";
 
 #pragma mark - control
 - (void)play {
+    [self scheduleProgressTimer];
     [self.player play];
 }
 - (void)pause {
+    [self.progressTimer invalidate];
     [self.player pause];
 }
 - (void)stop {
+    [self.progressTimer invalidate];
     [self.player pause];
     [self.player seekToTime:kCMTimeZero];
+}
+
+- (void)seekToPlayProgress:(double)playProgress {
+    int timescale = self.curPlayerItem.asset.duration.timescale;
+    float time = playProgress * (self.curPlayerItem.asset.duration.value / timescale);
+    [self.player seekToTime:CMTimeMakeWithSeconds(time, timescale)];
+}
+
+- (void)scheduleProgressTimer {
+    self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                          target:self
+                                                        selector:@selector(onProgressTimerFire)
+                                                        userInfo:nil
+                                                         repeats:YES];
+}
+
+#pragma mark - timer event
+- (void)onProgressTimerFire {
+    NSTimeInterval duration = CMTimeGetSeconds(self.curPlayerItem.asset.duration);
+    
+    // buffer progress
+    NSArray *loadedTimeRanges = [self.curPlayerItem loadedTimeRanges];
+    CMTimeRange timeRange = [loadedTimeRanges.firstObject CMTimeRangeValue];
+    double startSeconds = CMTimeGetSeconds(timeRange.start);
+    double durationSeconds = CMTimeGetSeconds(timeRange.duration);
+    NSTimeInterval bufferDuration = startSeconds + durationSeconds;
+    double bufferProgress = bufferDuration / duration;
+    if (self.onBufferProgressChanged) {
+        self.onBufferProgressChanged(bufferProgress);
+    }
+    
+    // play progress
+    NSTimeInterval current = CMTimeGetSeconds(self.player.currentTime);
+    if (duration <= 0) {
+        return;
+    }
+    double playProgress = current / duration;
+    if (self.onPlayProgressChanged) {
+        self.onPlayProgressChanged(playProgress, current, duration);
+    }
 }
 
 #pragma mark - 
@@ -118,6 +165,11 @@ static NSString * const s_M2NCPVKeyPathStatus = @"status";
     if (self.onPlayStallHandler) {
         self.onPlayStallHandler();
     }
+}
+
+#pragma mark -
+- (void)clean {
+    [self.progressTimer invalidate];
 }
 
 #pragma mark - dealloc
