@@ -30,21 +30,34 @@
     [self.playerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo([weakSelf.playerView superview]).with.insets(UIEdgeInsetsZero);
     }];
+    self.playerView.onFullScreenStatusChangedHandler = ^(BOOL isFullScreen) {
+        if (isFullScreen) {
+//            self.fullScreenShowButton.hidden = NO;
+            weakSelf.bottomHeightConstraint.constant = 0;
+            weakSelf.rightWidthConstraint.constant = 0;
+        } else {
+            weakSelf.rightWidthConstraint.constant = 600;
+            weakSelf.bottomHeightConstraint.constant = 300;
+        }
+        [UIView animateWithDuration:0.25
+                         animations:^{
+                             [weakSelf.view layoutIfNeeded];
+                         } completion:^(BOOL finished) {
+//                             if (!weakSelf.isFullScreen) {
+//                                 weakSelf.fullScreenShowButton.hidden = YES;
+//                             }
+                         }];
+    };
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [weakSelf.playerView reloadDataWithVideoURLString:@"http://img.iluokuang.cn:8080/video/Live_Free_or_Die_Hard_350K.mp4"];
+    });
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

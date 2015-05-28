@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface M7ShellPlayerView : UIView
-
+@property (nonatomic, copy) void (^onFullScreenStatusChangedHandler)(BOOL isFullScreen);
+- (void)reloadDataWithVideoURLString:(NSString *)videoURLString;
 @end

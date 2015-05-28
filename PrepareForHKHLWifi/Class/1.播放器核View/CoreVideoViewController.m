@@ -16,12 +16,9 @@
 @property (nonatomic) M2CorePlayerView *playerView;
 @property (nonatomic) BOOL isPlaying;
 @property (weak, nonatomic) IBOutlet UIProgressView *bufferProgressView;
-//@property (weak, nonatomic) IBOutlet UIProgressView *playProgressView;
 @property (weak, nonatomic) IBOutlet UISlider *playProgressSlider;
 @property (weak, nonatomic) IBOutlet UILabel *curLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
-@property (nonatomic) NSDateFormatter *hourFormatter;
-@property (nonatomic) NSDateFormatter *noHourFormatter;
 @end
 
 @implementation CoreVideoViewController
@@ -106,7 +103,6 @@
     self.totalLabel.text = [self dateStringFromTimeInterval:0];
 }
 
-#pragma mark -
 - (void)onPlayProgressValueChanged:(UISlider *)slider {
     [self.playerView seekToPlayProgress:slider.value];
 }

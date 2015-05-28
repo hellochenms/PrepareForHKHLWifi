@@ -11,6 +11,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0h-fR-88u" userLabel="playerArea">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5m-Pt-DSC" userLabel="controlView">
                     <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                     <subviews>
@@ -56,7 +60,25 @@
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ox9-hR-PHQ" userLabel="progressArea">
                             <rect key="frame" x="250" y="0.0" width="160" height="60"/>
+                            <subviews>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zot-xB-lrB">
+                                    <rect key="frame" x="0.0" y="29" width="160" height="2"/>
+                                    <color key="progressTintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </progressView>
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kv2-Ij-6a1">
+                                    <rect key="frame" x="-2" y="15" width="164" height="31"/>
+                                    <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </slider>
+                            </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="centerY" secondItem="zot-xB-lrB" secondAttribute="centerY" id="0AF-kg-vBE"/>
+                                <constraint firstAttribute="width" secondItem="kv2-Ij-6a1" secondAttribute="width" id="4QV-2R-Cl9"/>
+                                <constraint firstItem="zot-xB-lrB" firstAttribute="width" secondItem="Ox9-hR-PHQ" secondAttribute="width" id="I3j-Yn-Q7L"/>
+                                <constraint firstAttribute="centerY" secondItem="kv2-Ij-6a1" secondAttribute="centerY" id="I6u-pI-pJe"/>
+                                <constraint firstAttribute="centerX" secondItem="kv2-Ij-6a1" secondAttribute="centerX" id="eBP-Yh-uYx"/>
+                                <constraint firstAttribute="centerX" secondItem="zot-xB-lrB" secondAttribute="centerX" id="nOn-My-6nn"/>
+                            </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="md5-ib-atY" userLabel="totalLabel">
                             <rect key="frame" x="420" y="0.0" width="100" height="60"/>
@@ -107,14 +129,21 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="O5m-Pt-DSC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0Jz-Ca-GL9"/>
+                <constraint firstItem="t0h-fR-88u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0Mh-OH-QPO"/>
+                <constraint firstItem="O5m-Pt-DSC" firstAttribute="top" secondItem="t0h-fR-88u" secondAttribute="bottom" id="8nm-8X-auc"/>
+                <constraint firstItem="t0h-fR-88u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="G71-Ec-FX0"/>
                 <constraint firstAttribute="trailing" secondItem="O5m-Pt-DSC" secondAttribute="trailing" id="Jcj-Zh-jZ0"/>
+                <constraint firstAttribute="trailing" secondItem="t0h-fR-88u" secondAttribute="trailing" id="Qft-Z7-3ZN"/>
                 <constraint firstAttribute="bottom" secondItem="O5m-Pt-DSC" secondAttribute="bottom" id="X07-Jo-HRi"/>
             </constraints>
             <connections>
+                <outlet property="bufferProgressView" destination="zot-xB-lrB" id="Qqs-nz-PAw"/>
                 <outlet property="changeButton" destination="Gdg-oC-o7w" id="V9D-Oh-rln"/>
                 <outlet property="curLabel" destination="Pbn-uC-MNd" id="Lwb-mk-pFG"/>
                 <outlet property="nextButton" destination="jVW-wF-hn0" id="EQZ-I2-6ez"/>
                 <outlet property="nextButtonWidthConstraint" destination="M42-rx-Qdn" id="l89-mh-RAH"/>
+                <outlet property="playProgressSlider" destination="kv2-Ij-6a1" id="dQb-tW-IVB"/>
+                <outlet property="playerArea" destination="t0h-fR-88u" id="8gB-wK-C6z"/>
                 <outlet property="progressArea" destination="Ox9-hR-PHQ" id="jWT-JR-5Dl"/>
                 <outlet property="statusButton" destination="704-bT-D3z" id="AYX-S1-SPx"/>
                 <outlet property="totalLabel" destination="md5-ib-atY" id="7aC-9W-E50"/>
